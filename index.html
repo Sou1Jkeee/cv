@@ -12,6 +12,8 @@
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/custom-styles.css" rel="stylesheet">
   <link href="css/materialize.min.css" rel="stylesheet">
+  <script src="js/moment-with-locales.min.js"></script>
+  <script src="js/custom.js"></script>
 
   <!-- Open Graph -->
   <meta property="twitter:card" content="summary_large_image" />
@@ -25,7 +27,7 @@
   <meta property="og:image:type" content="image/jpeg" />
 
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -36,7 +38,6 @@
         accurateTrackBounce:true
     });
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/66021301" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>
 <body>
   <div class="container">
@@ -59,7 +60,7 @@
           <h4>Обо мне:</h4>
           <p><em>Город:</em> Москва</p>
           <p><em>Возраст:</em> 31</p>
-          <p><em>Опыт разработки:</em> ~2 лет</p>
+          <p><em>Опыт разработки:</em> <span id="exp"></span></p>
           <p><em>English:</em> Intermediate (B1)</p>
         </div>
         <div class="col s12 m6 l6">
@@ -88,6 +89,38 @@
         </div>
       </div>
       <div class="row">
+        <div class="col s12 m12 l12">
+          <h4>Опыт работы:</h4>
+          <table>
+            <thead>
+            <tr>
+              <th>Должность</th>
+              <th>Компания</th>
+              <th>Срок</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Системный разработчик</td>
+              <td>Единый Оператор</td>
+              <td>
+                <p>07/2021 - наст. в.</p>
+                <span id="eo"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>Разработчик</td>
+              <td>Сервис-Телематика</td>
+              <td>
+                <p>10/2020 - 07/2021</p>
+                <span id="st"></span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
         <div class="col s12 m6 l6">
           <h4>Проекты:</h4>
           <ul>
@@ -106,7 +139,7 @@
           </ul>
         </div>
         <div class="col s12 m6 l6">
-          <h4>Опыт:</h4>
+          <h4>Open-Source:</h4>
           <p>Контрибьютор проекта
             <a target="_blank" href="https://github.com/qkspace/qkspace">QKspace</a> (читается «квик спэйс») - это минималистичная база знаний для небольших команд.
             <br>
@@ -116,5 +149,10 @@
       </div>
     </main>
   </div>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/66021301" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
 </body>
 </html>
